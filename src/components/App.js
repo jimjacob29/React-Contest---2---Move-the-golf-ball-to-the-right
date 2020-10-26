@@ -28,7 +28,10 @@ class App extends Component {
       );
   }
   arrowRight(event) {
-    if (event.key === "ArrowRight" || event.keyCode === 39) {
+    if (
+      (event.key === "ArrowRight" || event.keyCode === 39) &&
+      this.state.renderBall
+    ) {
       this.count = this.count + 1;
       let obj = {};
       obj.left = this.count * 5 + "px";
